@@ -1,3 +1,46 @@
+//Operating system process scheduler module
+//Written by Benyamin Noori
+
+
+//sort processes in the list based on time of arrival
+var sortByArrival = function(obj_list){
+	for(var i = 0; i < obj_list.length; i++){
+		for(var j = i; j < obj_list.length; j++){
+			if(obj_list[i].arrival_time > obj_list[i].arrival_time) {
+				var temp = obj_list[i];
+				obj_list[i] = obj_list[j];
+				obj_list[j] = temp;
+			}
+		}
+	}
+	return obj_list;
+}
+
+
+//sort processes in the list based on length of execution
+var sortByLength = function(obj_list){
+	for(var i = 0; i < obj_list.length; i++){
+		for(var j = i; j < obj_list.length; j++){
+			if(obj_list[i].len > obj_list[j].len) {
+				var temp = obj_list[i];
+				obj_list[i] = obj_list[j];
+				obj_list[j] = temp;
+			}
+		}
+	}
+	return obj_list;	
+}
+
+//add processes that have arrived by curr_time to queue of processes
+var updateCur = function(queue, proc_list, curr_time){
+
+	while(proc_list.length > 0 && proc_list[0].arrival_time <= curr_time){
+		queue.push(proc_list.shift());
+	}
+
+	return queue;
+}
+
 
 //proc_info contains the following: 
 //1. "proc_list": a list of {"id", "len", "arrival_time"} objects each representing a process
