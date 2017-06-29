@@ -4,9 +4,11 @@ OSPS (Operating System's Process Scheduler) is a node module that simulates the 
 
 ## Usage
 
+```js
 var osps = require("./osps.js");
-
 var sim = osps.schedule(proc_info);
+```
+
 
 ### Inputs
 The proc_info object should contain the following: 
