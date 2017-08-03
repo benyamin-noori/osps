@@ -1,6 +1,6 @@
 {
   "name": "osps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OSPS is a ndoe module that simulates the process scheduling algorithms",
   "main": "osps.js",
   "scripts": {
