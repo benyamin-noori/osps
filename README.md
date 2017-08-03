@@ -2,6 +2,13 @@
 ## Introduction
 OSPS (Operating System's Process Scheduler) is a node module that simulates the process scheduling algorithms. 
 
+## Installation 
+
+
+```js
+npm install osps
+```
+
 ## Usage
 
 ```js
